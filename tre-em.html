@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tre-em.css">
+    <script src="chi-tiet-san-pham.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iUNeBUpAq8f7EeAMgpf5AC/jAI6I1sOtF7CFqjA5C1pvI2ExuIUn6Zz" crossorigin="anonymous">
+    <title>Chi Tiết Sản Phẩm Trẻ Em</title>
+</head>
+
+<body>
+
+    <section id="chi-tiet-san-pham">
+        <div class="product-info">
+            <img src="https://gd4.alicdn.com/imgextra/i4/2927041648/TB2wP3bdTlYBeNjSszcXXbwhFXa_!!2927041648.jpg_400x400.jpg" alt="Áo Sơ Mi Trẻ Em" class="product-image">
+            <div class="details">
+                <h1>Áo Sơ Mi Trẻ Em Trắng</h1>
+                <label for="color">Chọn Màu Sắc:</label>
+                <select id="color" name="color">
+                    <option value="trang">Trắng</option>
+                    <!-- Thêm các màu sắc khác nếu cần -->
+                </select>
+                <label for="size">Chọn Kích Thước:</label>
+                <select id="size" name="size" onchange="updatePrice()">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                </select>
+                <p class="price" id="product-price">Giá: 370,000 VND</p>
+                <button onclick="addToCart()">
+                    Thêm vào Giỏ Hàng <i class="fas fa-shopping-cart"></i>
+                </button>
+                <script>
+                    function addToCart() {
+                        // Thêm logic xử lý thêm sản phẩm vào giỏ hàng ở đây (đoạn mã JavaScript của bạn)
+                
+                        // Sau khi xử lý, chuyển hướng đến trang giỏ hàng
+                        window.location.href = "gio-hang.html";
+                    }
+                </script>
+            </div>
+        </div><p class="description"><strong>Mô Tả:</strong> Áo sơ mi trẻ em là một phần không thể thiếu trong tủ đồ của các bé, mang lại sự dễ thương và ngộ nghĩnh. Những chiếc áo này thường được thiết kế với những màu sắc tươi vui và họa tiết đáng yêu, tạo nên diện mạo vô cùng đáng yêu cho các bé. Chất liệu thường là cotton thoáng khí, giúp bảo vệ làn da nhạy cảm của trẻ. Các chi tiết như hình in, họa tiết hoặc các hình thêu nhỏ thường được thêm vào để làm cho chiếc áo trở nên độc đáo và phản ánh cá tính của từng đứa trẻ. Kiểu dáng linh hoạt từ áo sơ mi cổ điển đến áo thun trơn, giúp phụ huynh dễ dàng lựa chọn theo sở thích và hoàn cảnh sử dụng của bé. Áo sơ mi trẻ em không chỉ là trang phục bình thường mà còn là biểu tượng của sự vui tươi và sự trong sáng, hòa quyện với thế giới tươi mới mà các bé đang trải nghiệm.</p>
+    </section>
+
+    <script>
+        const sizePrices = {
+            s: 370000,
+            m: 400000,
+            l: 430000
+        };
+
+        function updatePrice() {
+            const selectedSize = document.getElementById('size').value;
+            const priceElement = document.getElementById('product-price');
+            priceElement.textContent = `Giá: ${sizePrices[selectedSize]} VND`;
+        }
+    </script>
+
+</body>
+
+</html>

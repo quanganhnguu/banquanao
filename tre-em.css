@@ -1,0 +1,46 @@
+/* Bổ sung vào phần CSS hiện tại của bạn hoặc sử dụng toàn bộ mã này nếu chưa có CSS */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #chi-tiet-san-pham {
+    max-width: 600px;
+    margin: 50px auto;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info img {
+    max-width: 150px;
+    margin-right: 20px;
+  }
+  
+  .details {
+    max-width: 300px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  select,
+  button {
+    margin-top: 5px;
+    padding: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #ff0000; /* Màu sắc giá tiền */
+  }
+  
+  .description {
+    margin-top: 20px;
+  }

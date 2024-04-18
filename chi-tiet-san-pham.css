@@ -1,0 +1,67 @@
+/* chi-tiet-san-pham.css và chi-tiet-san-pham-nam.css */
+.product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info img {
+    max-width: 20%; /* Độ rộng tối đa của hình ảnh */
+    height: auto;
+    margin-right: 20px; /* Khoảng cách giữa hình ảnh và phần thông tin */
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details h1 {
+    margin-bottom: 10px;
+  }/* Bổ sung vào phần CSS hiện tại của bạn hoặc sử dụng toàn bộ mã này nếu chưa có CSS */
+  
+  .product-info {
+    display: flex;
+  }
+  
+  .product-image {
+    max-width: 200px; /* Điều chỉnh kích thước hình ảnh */
+    margin-right: 20px;
+  }
+  
+  .details {
+    max-width: 400px; /* Điều chỉnh kích thước thông tin sản phẩm */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select, button {
+    margin-top: 5px;
+    padding: 8px;
+  }
+  
+  #price {
+    font-weight: bold;
+    color: #ff0000; /* Màu sắc giá tiền */
+  }
+  
+  
+  label, select, button {
+    margin-bottom: 10px;
+  }
+  
+  .details button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .details button:hover {
+    background-color: #45a049;
+  }

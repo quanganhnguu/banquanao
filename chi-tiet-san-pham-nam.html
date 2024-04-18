@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chi-tiet-san-pham-nam.css">
+    <script src="chi-tiet-san-pham.js"></script>
+    <title>Chi Tiết Sản Phẩm Nam</title>
+</head>
+
+<body>
+
+    <section id="chi-tiet-san-pham">
+        <div class="product-info">
+            <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/426/984/products/8e4fff88-a0f0-4106-a2b6-6937f743b880.jpg?v=1625127174013" alt="Áo Thun Màu Nam Trắng" class="product-image">
+            <div class="details">
+                <h1>Áo Thun Nam Màu Trắng </h1>
+                <label for="color">Chọn Màu Sắc:</label>
+                <select id="color" name="color">
+                    <option value="trang">Trắng</option>
+                    <option value="den">Đen</option>
+                </select>
+
+                <label for="size">Chọn Kích Thước:</label>
+                <select id="size" name="size">
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                </select>
+
+                <p><strong>Giá:</strong> <span id="price">300000 VND</span></p>
+                <button onclick="addToCart()">Thêm vào Giỏ Hàng</button>
+                <script>
+                    function addToCart() {
+                        // Thêm logic xử lý thêm sản phẩm vào giỏ hàng ở đây (đoạn mã JavaScript của bạn)
+                
+                        // Sau khi xử lý, chuyển hướng đến trang giỏ hàng
+                        window.location.href = "gio-hangnam.html";
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <div id="product-description">
+        <p><strong>Mô Tả:</strong> Áo sơ mi trắng cho nam giới không chỉ là một chiếc áo, mà còn là biểu tượng của sự lịch lãm và tinh tế. Với kiểu dáng đa dạng, từ cổ điển đến hiện đại, áo sơ mi trắng thường được làm từ chất liệu cotton hoặc linen, mang lại cảm giác thoải mái và mát mẻ. Màu trắng trung tính giúp áo dễ dàng kết hợp với nhiều loại quần khác nhau, từ jeans cá tính đến quần tây lịch sự. Cho dù bạn đi làm, dự tiệc, hay chỉ đơn giản là dạo phố, áo sơ mi trắng luôn là sự lựa chọn hoàn hảo, tạo nên phong cách ấn tượng và đẳng cấp.</p>
+    </div>
+
+</body>
+
+</html>

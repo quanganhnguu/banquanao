@@ -1,0 +1,29 @@
+/* Bổ sung vào phần CSS hiện tại của bạn hoặc sử dụng toàn bộ mã này nếu chưa có CSS */
+
+.product-info {
+    display: flex;
+  }
+  
+  .product-image {
+    max-width: 200px; /* Điều chỉnh kích thước hình ảnh */
+    margin-right: 20px;
+  }
+  
+  .details {
+    max-width: 400px; /* Điều chỉnh kích thước thông tin sản phẩm */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select, button {
+    margin-top: 5px;
+    padding: 8px;
+  }
+  
+  #price {
+    font-weight: bold;
+    color: #ff0000; /* Màu sắc giá tiền */
+  }

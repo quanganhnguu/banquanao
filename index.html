@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Suy-fashionn</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="z5070426687560_4e108424f2df3408b59034d3746c719c (1).jpg" alt="Logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <div class="menu">
+    <li class="menu-item"><a href="index2.html">Nữ</a>
+          <ul class="sub-menu">
+                        <li><a href="#hangmoive">Hàng mới vē</a></li>
+                        <li><a href="#bst">BST</a></li>
+                        <li><a href="#ao">Áo</a>
+                            <ul>
+                                <li><a href="#aosomi">-Áo sơ mi</a></li>
+                                <li><a href="#aothun">-Áo thun</a></li>
+                                <li><a href="#aolen">-Áo len</a></li>
+                                <li><a href="#aokhoac">-Áo khoác</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#quan">Quần</a>
+                            <ul>
+                                <li><a href="#quandai">-Quần dài</a></li>
+                                <li><a href="#quanlung">-Quần lửng</a></li>
+                                <li><a href="#quankaki">-Quần kaki</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="index2.html">Nam</a>
+                  
+                    <ul class="sub-menu">
+                        <li><a href="#hangmoive">Hàng mới vē</a></li>
+                        <li><a href="#bst">BST</a></li>
+                        <li><a href="#ao">Áo</a>
+                            <ul>
+                                <li><a href="#aosomi">-Áo sơ mi</a></li>
+                                <li><a href="#aothun">-Áo thun</a></li>
+                                <li><a href="#aolen">-Áo len</a></li>
+                                <li><a href="#aokhoac">-Áo khoác</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#quan">Quần</a>
+                            <ul>
+                                <li><a href="#quandai">-Quần dài</a></li>
+                                <li><a href="#quanlung">-Quần lửng</a></li>
+                                <li><a href="#quankaki">-Quần kaki</a></li>
+                            </ul>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a href="index2.html">Trẻ em</a>
+                 
+                    <ul class="sub-menu"><li><a href="#hangmoive">Hàng mới vē</a></li>
+                        <li><a href="#bst">BST</a></li>
+                        <li><a href="#ao">Áo</a>
+                            <ul>
+                                <li><a href="#aosomi">-Áo sơ mi</a></li>
+                                <li><a href="#aothun">-Áo thun</a></li>
+                                <li><a href="#aolen">-Áo len</a></li>
+                                <li><a href="#aokhoac">-Áo khoác</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#quan">Quần</a>
+                            <ul>
+                                <li><a href="#quandai">-Quần dài</a></li>
+                                <li><a href="#quanlung">-Quần lửng</a></li>
+                                <li><a href="#quankaki">-Quần kaki</a></li>
+                            </ul>
+                        </li>
+                   
+                    </ul>
+                </li>
+
+                <li><a href="#thongtin">Thông tin</a>
+                    <ul class="sub-menu">
+                        <li><a href="#nhanvientuvan">Gọi Nhân Viên Tư Vấn</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="others">
+            <li><input placeholder="Tìm Kiếm" type="text"> <i class="fas fa-search"></i></li>
+            <li> <a class="fa fa-paw" href=""></a></li>
+            <li> <a class="fa fa-user" href=""></a></li>
+            <li> <a class="fa fa-shopping-bag" href="index2.html"></a></li>
+        </div>
+    </header>
+<section id="Slider">
+ <div class="aspect-ratio-169">
+    <img src="z5070442333456_5eaf8de282c7ddfb92b55d7e9c80ba66.jpg">
+    <img src="z5070442669866_4b0a5bc4edf14989205cacf0333dbfd6.jpg">
+    <img src="z5070443061643_d5701abfeea896f98b3a2c19e1150e93.jpg">
+ </div>
+ <div class="dot-contanner">
+    <div class="dot active"></div>
+    <div class="dot "></div>
+    <div class="dot"></div>
+ </div>
+</section>
+
+</body>
+<script>
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img");
+    const imgContainer = document.querySelector('.aspect-ratio-169');
+    const dotItem = document.querySelectorAll(".dot");
+    let imgNumber = imgPosition.length;
+    let index = 0;
+    let intervalId;
+
+    imgPosition.forEach(function (image, index) {
+        image.style.left = index * 100 + "%";
+        dotItem[index].addEventListener("click", function () {
+            clearInterval(intervalId); // Dừng interval hiện tại
+            Slider(index);
+        });
+    });
+
+    function imgSlide() {
+        index++;
+        if (index >= imgNumber) {
+        index = 0;
+        }
+        Slider(index);
+    }
+
+    function Slider(index) {
+        imgContainer.style.transform = "translateX(-" + index * 100 + "%)";
+        const dotActive = document.querySelector('.active');
+        dotActive.classList.remove("active");
+        dotItem[index].classList.add("active");
+
+        // Khởi tạo lại interval sau khi slider di chuyển hoàn tấtintervalId = setInterval(imgSlide, 5000);
+    }
+
+intervalId = setInterval(imgSlide, 5000); // Khởi tạo interval ban đầu
+</script>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Sản Phẩm Quần Áo</title>
+</head>
+<body>
+<header>
+    <h1>Sản Phẩm Quần Áo</h1>
+</header>
+
+</body>
+</body>
+</html>

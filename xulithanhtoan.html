@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="chi-tiet-san-pham.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 50px;
+            height: 170px;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            padding: 50px;
+        }
+
+        .logo img {
+            max-height: 200px;
+        }
+
+        .menu {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #f5f5f5;
+            z-index: 1000;
+        }
+
+        .menu>li {
+            padding: 0 12px;
+            position: relative;
+            text-align: center;
+        }
+
+        .menu-item:hover a {
+            color: #333;
+        }
+
+        .menu>li:hover .sub-menu {
+            visibility: visible;
+            top: 30px;
+        }
+
+        .sub-menu {
+            position: absolute;
+            width: 150px;
+            border: 1px solid #ccc;
+            padding: 10px 0 10px 20px;
+            visibility: hidden;
+            top: 50px;
+            transition: 0.5s;
+            background-color: #fff;
+        }
+
+        .menu-item:hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu li {
+            padding: 10px 0;
+        }
+
+        .sub-menu li a {
+            color: #333;
+            font-weight: normal;
+        }
+
+        .sub-menu li a:hover {
+            font-weight: bold;
+        }
+
+        .others {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .others>li {
+            padding: 0 12px;
+        }
+
+        .others>li:first-child input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #333;
+        }
+
+        .others>li:first-child i {
+            position: absolute;
+            right: 10px;
+        }
+
+        #Slider {
+            padding-bottom: 30px;
+            border-bottom: 2px solid #000;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .aspect-ratio-169 {
+            display: block;
+            position: relative;
+            padding-top: 56.25%;
+            transition: 0.3s;
+        }
+
+        .aspect-ratio-169 img {
+            display: block;
+            position: absolute;width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style: none;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-display {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Đổi số cột thành 3 */
+            gap: 20px;
+        }
+
+        .product {
+            text-align: center;
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+
+        #treem .product-display {
+            grid-template-columns: repeat(3, minmax(150px, 1fr));
+        }
+
+        /* Thêm mã CSS mới cho nút màu và kích thước */
+        .color-options,
+        .size-options {
+            margin-bottom: 15px;
+        }
+
+        .color-buttons,
+        .size-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .color-button,
+        .size-button {
+            padding: 8px 16px;
+            border: 2px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .color-button:hover,
+        .size-button:hover {
+            border-color: #333;
+        }
+    </style>
+    <title>Suy-fashionn</title>
+</head>
+
+<body>
+    <!-- Thêm phần header -->
+    <header>
+        <div class="logo">
+            <img src="z5070426687560_4e108424f2df3408b59034d3746c719c (1).jpg" alt="Logo">
+        </div>
+        <div class="menu">
+            <li class="menu-item"><a href="#nu">Nữ</a>
+                <ul class="sub-menu">
+                    <li><a href="#nu-hangmoive">Hàng mới vē</a></li>
+                    <li><a href="#nu-bst">BST</a></li>
+                    <li><a href="#nu-ao">Áo</a>
+                        <ul>
+                            <li><a href="#nu-aosomi">-Áo sơ mi</a></li>
+                            <li><a href="#nu-aothun">-Áo thun</a></li>
+                            <li><a href="#nu-aolen">-Áo len</a></li>
+                            <li><a href="#nu-aokhoac">-Áo khoác</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#nu-quan">Quần</a><ul>
+                        <li><a href="#nu-quandai">-Quần dài</a></li>
+                        <li><a href="#nu-quanlung">-Quần lửng</a></li>
+                        <li><a href="#nu-quankaki">-Quần kaki</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-item"><a href="#nam">Nam</a>
+            <ul class="sub-menu">
+                <li><a href="#nam-hangmoive">Hàng mới vē</a></li>
+                <li><a href="#nam-bst">BST</a></li>
+                <li><a href="#nam-ao">Áo</a>
+                    <ul>
+                        <li><a href="#nam-aosomi">-Áo sơ mi</a></li>
+                        <li><a href="#nam-aothun">-Áo thun</a></li>
+                        <li><a href="#nam-aolen">-Áo len</a></li>
+                        <li><a href="#nam-aokhoac">-Áo khoác</a></li>
+                    </ul>
+                </li>
+                <li><a href="#nam-quan">Quần</a>
+                    <ul>
+                        <li><a href="#nam-quandai">-Quần dài</a></li>
+                        <li><a href="#nam-quanlung">-Quần lửng</a></li>
+                        <li><a href="#nam-quankaki">-Quần kaki</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-item"><a href="#treem">Trẻ em</a>
+            <ul class="sub-menu">
+                <li><a href="#treem-hangmoive">Hàng mới vē</a></li>
+                <li><a href="#treem-bst">BST</a></li>
+                <li><a href="#treem-ao">Áo</a>
+                    <ul>
+                        <li><a href="#treem-aosomi">-Áo sơ mi</a></li>
+                        <li><a href="#treem-aothun">-Áo thun</a></li>
+                        <li><a href="#treem-aolen">-Áo len</a></li>
+                        <li><a href="#treem-aokhoac">-Áo khoác</a></li>
+                    </ul>
+                </li>
+                <li><a href="#treem-quan">Quần</a>
+                    <ul>
+                        <li><a href="#treem-quandai">-Quần dài</a></li>
+                        <li><a href="#treem-quanlung">-Quần lửng</a></li>
+                        <li><a href="#treem-quankaki">-Quần kaki</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="menu-item"><a href="#thongtin">Thông tin</a>
+            <ul class="sub-menu">
+                <li><a href="#">Gọi Nhân Viên Tư Vấn</a></li>
+            </ul>
+        </li>
+    </div>
+    <div class="others"><li><input placeholder="Tìm Kiếm" type="text"> <i class="fas fa-search"></i></li>
+        <li> <a class="fa fa-paw" href="" ></a></li>
+        <li> <a class="fa fa-user" href="" ></a></li>
+        <li> <a class="fa fa-shopping-bag" href="" ></a></li>
+    </div> 
+ </header>
+
+    
+
+<p>
+    Đặt Hàng Thành Công ! 
+    Cảm ơn quý khách 
+</p>
+<button><p ><a href="index.html">Quay Lại Trang Chủ </a></p></button>
+<body>

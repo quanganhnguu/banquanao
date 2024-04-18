@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+    height: 170px;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    padding: 50px;
+}
+
+.logo img {
+    max-height: 200px;
+}
+
+.menu {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+    z-index: 1000;
+}
+
+.menu>li {
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+}
+
+.menu-item:hover a {
+    color: #333;
+}
+
+.menu>li:hover .sub-menu {
+    visibility: visible;
+    top: 30px;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 50px;
+    transition: 0.5s;
+    background-color: #fff;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    padding: 10px 0;
+}
+
+.sub-menu li a {
+    color: #333;
+    font-weight: normal;
+}
+
+.sub-menu li a:hover {
+    font-weight: bold;
+}
+
+.others {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.others>li {
+    padding: 0 12px;
+}
+
+.others>li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+
+.others>li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+
+#Slider {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+}
+
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+}.menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-display {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Đổi số cột thành 3 */
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+#treem .product-display {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
